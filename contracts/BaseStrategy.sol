@@ -634,6 +634,9 @@ abstract contract BaseStrategy {
 
         uint256 outstanding = vault.debtOutstanding();
 
+        // Should have outstanding greater than 0 to increase yield
+        if (outstanding == 0) return false;
+
         // return false;
         // for simplicity, I compare onl callCost and outstanding
         return callCostInWei < outstanding;
