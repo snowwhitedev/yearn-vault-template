@@ -638,7 +638,7 @@ abstract contract BaseStrategy {
         if (outstanding == 0) return false;
 
         // return false;
-        // for simplicity, I compare callCost wiht outstanding
+        // for simplicity, I compare callCost with outstanding
         return callCostInWei < outstanding;
     }
 
